@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: red;
+    animation: gradientAnimation 8s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
+    margin: 0;
+}
+
+@keyframes fade {
+    0% { opacity: 0.5; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.heart {
+    display: inline-block;
+    animation: fade 1.5s infinite ease-in-out;
+    color: red;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(20deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-20deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.waving-hand {
+    display: inline-block;
+    animation: wave 1.5s infinite ease-in-out;
+    transform-origin: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(255, 0, 0, 0.5); /* Red shadow */
+    z-index: 1000;
+    place-content: center;
+    width: 95%;
+    height: inherit;
+}
+
+h1 {
+    color: #ff0000; /* Bright Red */
+    margin-bottom: 0.5em;
+}
+
+button {
+    background-color: #b30000; /* Dark Red */
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+    box-shadow: 0px 5px 10px rgba(255, 0, 0, 0.5);
+    animation: pulseAnimation 1.5s infinite ease-in-out;
+}
+
+/* Pulse animation to attract attention */
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+        background-color: #b30000;
+    }
+    50% {
+        transform: scale(1.1);
+        background-color: #800000; /* Darker Red */
+    }
+    100% {
+        transform: scale(1);
+        background-color: #b30000;
+    }
+}
+
+button:hover {
+    background-color: #800000; /* Darker Red */
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(255, 0, 0, 0.7);
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+    color: #000; /* Light Red */
+}
