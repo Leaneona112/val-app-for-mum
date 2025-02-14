@@ -3,7 +3,7 @@
             const audio = document.getElementById('greetingAudio');
 
             // Set a default volume (for example, 0.5 which is 50% volume)
-            audio.volume = 0.1;
+            audio.volume = 0.3;
             
             // Wait for user interaction before playing
             document.body.addEventListener("click", () => {
@@ -14,9 +14,10 @@
         };
         
 
-        // Messages for mum
+        // Messages for Adeona Olufunmilayo Ebun
         const messages = [
             "Happy val mum! ❤️",
+            "Adeona Oluwafunmilayo Ebun!🏔️",
             "Mom, you are the best! Love you! ❤️",
             "Thanks for always being there, Mom! 🙌",
             "You're my hero, Mom! 🦸‍♀️",
